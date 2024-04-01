@@ -39,9 +39,9 @@ local function parseArguments(source, args, raw, params)
         elseif param.type == 'string' then
             value = not tonumber(arg) and arg
         elseif param.type == 'playerId' then
-            value = arg == 'me' and source or tonumber(arg)
+            value = tNet.GetPlayerIdFromCharacterId(arg == 'me' and source or tonumber(arg))
 
-            if not value or not DoesPlayerExist(value--[[@as string]]) then
+            if not value then
                 value = false
             end
         else

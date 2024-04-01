@@ -1,3 +1,5 @@
+tNet = exports.tnet_core:getSharedObject()
+
 ---@meta
 ---ox_lib <https://github.com/overextended/ox_lib>
 ---Copyright (C) 2021 Linden <https://github.com/thelindat>
